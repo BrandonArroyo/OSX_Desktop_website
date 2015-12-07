@@ -1,0 +1,22 @@
+
+<!-- saved from url=(0023)http://localhost:3000/# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Homepage</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="./Homepage_files/normalize.css"><link rel="stylesheet" type="text/css" href="./Homepage_files/menubar.css"><link rel="stlyesheet" type="text/css" href="./Homepage_files/dock.css"><link rel="stylesheet" href="./Homepage_files/font-awesome.min.css"><style type="text/css"></style><style type="text/css"></style></head><body cz-shortcut-listen="true"><div class="desktop"><div class="menubar"><ul><div class="left"><li><a href="./Homepage_files/Homepage.html"><span class="fa fa-apple"></span></a></li><li><a href="./Homepage_files/Homepage.html" class="program">Finder</a></li><li><a href="./Homepage_files/Homepage.html">File</a></li><li><a href="./Homepage_files/Homepage.html">Edit</a></li><li><a href="./Homepage_files/Homepage.html">View</a></li><li><a href="./Homepage_files/Homepage.html">Go</a></li><li><a href="./Homepage_files/Homepage.html">Window</a></li><li><a href="./Homepage_files/Homepage.html">Help</a></li></div><div class="right"><li><span id="wifi" class="fa fa-wifi"></span></li><li><span id="battery" class="fa fa-battery-full"></span></li><li><script type="text/javascript">tday=new Array("Sun","Mon","Tue","Wed","Thur","Fri","Sat");
+tmonth=new Array("Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec");
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+if(nyear<1000) nyear+=1900;
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('time').innerHTML=""+tday[nday]+" "+tmonth[nmonth]+" "+ndate+"  &#160;"+nhour+":"+nmin+":"+nsec+" "+ap;
+}
+window.onload=function(){
+    GetClock();
+    setInterval(GetClock,1000);
+}</script><div id="time">Sun Nov 22  &nbsp;4:02:30  PM</div></li><li><a href="./Homepage_files/Homepage.html"><span id="search" class="fa fa-search"></span></a></li><li><a href="./Homepage_files/Homepage.html"><span id="bars" class="fa fa-bars"></span></a></li></div></ul></div></div><div class="dock"> <ul><li class="icon"><a href="./Homepage_files/Homepage.html"><img src="./Homepage_files/finder.png"></a><div class="text"><div id="finder-active">.    </div></div></li><li class="icon"><a href="./Homepage_files/Homepage.html"><img src="./Homepage_files/safari.png"></a><div class="text"><div id="safari-active">.</div></div></li><li class="icon"><a href="./Homepage_files/Homepage.html"><img src="./Homepage_files/gmail.ico"></a><div class="text"> <div id="gmail-active">.</div></div></li><li class="icon"><a href="./Homepage_files/Homepage.html"><div id="atom"><img src="./Homepage_files/atom.png"></div></a><div class="text"> <div id="atom-active"> .</div></div></li><li class="icon"><a href="./Homepage_files/Homepage.html"><img src="./Homepage_files/spotify.ico"></a><div class="text"><div id="spotify-active">.</div></div></li></ul></div><script src="./Homepage_files/jquery.min.js"></script><script src="./Homepage_files/script.js"></script></body></html>

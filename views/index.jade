@@ -1,0 +1,104 @@
+html
+    head
+        title!= title
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', type='text/css', href="css/normalize.css")
+        link(rel='stylesheet', type='text/css', href='css/menubar.css')  
+        link(rel="stlyesheet", type='text/css', href='css/dock.css') 
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+        
+    body
+        .desktop
+        
+            .menubar
+                ul
+                    .left
+                        li
+                            a(href='#')
+                                span.fa.fa-apple
+                        li
+                            a.program(href='#') Finder
+                        li
+                            a(href='#') File
+                        li
+                            a(href='#') Edit
+                        li
+                            a(href='#') View
+                        li
+                            a(href='#') Go
+                        li
+                            a(href='#') Window
+                        li
+                            a(href='#') Help
+                    .right
+                        li
+                            span.fa.fa-wifi(id='wifi')
+                        li
+                            span.fa.fa-battery-full(id='battery')
+                        li
+                            script(type='text/javascript').
+                                tday=new Array("Sun","Mon","Tue","Wed","Thur","Fri","Sat");
+                                tmonth=new Array("Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec");
+                                function GetClock(){
+                                var d=new Date();
+                                var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+                                if(nyear<1000) nyear+=1900;
+                                var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+                                if(nhour==0){ap=" AM";nhour=12;}
+                                else if(nhour<12){ap=" AM";}
+                                else if(nhour==12){ap=" PM";}
+                                else if(nhour>12){ap=" PM";nhour-=12;}
+                                if(nmin<=9) nmin="0"+nmin;
+                                if(nsec<=9) nsec="0"+nsec;
+                                
+                                document.getElementById('time').innerHTML=""+tday[nday]+" "+tmonth[nmonth]+" "+ndate+"  &#160;"+nhour+":"+nmin+":"+nsec+" "+ap;
+                                }
+                                window.onload=function(){
+                                    GetClock();
+                                    setInterval(GetClock,1000);
+                                }
+                            #time
+                        li
+                            a(href='#')
+                                span.fa.fa-search(id='search')
+                        li
+                            a(href='#')
+                                span.fa.fa-bars(id='bars')
+        .dock 
+            ul
+                li(class='icon' id='spot_1')
+                    a(href='#')
+                        img(src='css/img/finder.png')
+                    .text
+                        #active_1(style='display:none') .    
+                li(class='icon' id='spot_2')
+                    a(href='#')
+                        img(src='css/img/safari.png')
+                    .text
+                        #active_2(style='display:none') .
+                li(class='icon' id='spot_3')
+                    a(href='#')
+                        img(src='css/img/App-Store.png')
+                    .text 
+                        #active_3(style='display:none') .
+                li(class='icon' id='spot_4')
+                    a(href='#')
+                        #atom
+                            img(src='css/img/atom.png')
+                    .text
+                        #active_4(style='display:none') .
+                li(class='icon' id='spot_5')
+                    a(href='#')
+                        img(src='css/img/gmail.ico')
+                    .text
+                         #active_5(style='display:none') .
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+        script(src='scripts/script.js')
+        .safari
+            .navbar
+                .buttons
+                    .btn.close
+                    .btn.minimize
+                    .btn.full
+                    span.fa.fa-home
+                input(type='text', value='brandonarroyo.github.io')

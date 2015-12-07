@@ -1,0 +1,244 @@
+html {
+  background: url(img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.desktop {
+
+  font-family: "Helvetica neue", Helvetica, sans-serif;
+  position: relative;
+}
+
+
+/*left part of the nave bar*/
+.desktop ul .left{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.desktop ul .left li {
+  display: inline-block;
+}
+.desktop ul .left li a {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+.desktop .menubar {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(33,33,33,.9);
+}
+.desktop .menubar ul  {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.desktop .menubar ul {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.desktop .menubar ul .left li a {
+  color: #ffffff;
+  font-size: 0.95em;
+  line-height: 1.4;
+  padding: 0.1em 0.5em;
+  text-decoration: none;
+}
+
+.desktop .menubar ul .left  li a .fa-apple {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.desktop .menubar ul .left li a.program {
+  font-weight: bold;
+}
+.desktop .menubar ul .left li a:hover {
+  background-color: #6b6b6b;
+}
+
+/*right part of the nave pbar */
+.right{
+    right:0%;
+    top: 0;
+    position:absolute
+
+}
+.desktop ul .right{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.desktop ul .right li {
+  display: inline-block;
+}
+.desktop ul .right li a {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+}
+
+.desktop .menubar ul .right li a {
+  color: #ffffff;
+  font-size: 0.95em;
+  line-height: 1.4;
+  padding: 0.1em 0.5em;
+  text-decoration: none;
+}
+.desktop .menubar ul .right  li  #wifi {
+    padding-top: 3px;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.desktop .menubar ul .right  li  #battery {
+    padding-top: 3px;
+    padding-left: 10px;
+    font-size: 1em;
+    color: #ffffff;
+}
+.desktop .menubar ul .right  li  #time {
+    padding-top: 3px;
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: .9em;
+    color: #ffffff;
+}
+.desktop .menubar ul .right  li  #search {
+    padding-top: 3px;
+    padding-left: 4px;
+    font-size: 1em;
+    color: #ffffff;
+}
+.desktop .menubar ul .right  li  #bars {
+    padding-top: 3px;
+    padding-left: 1px;
+    font-size: 1em;
+    color: #ffffff;
+}
+.desktop .menubar ul .right li a:hover {
+
+    background-color: #6b6b6b;
+}
+
+/*dock  +++++++++++++++*/
+.dock{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color:#fff;
+
+}
+.dock ul li{
+    transition: all .33s ease-out;
+
+}
+
+.dock ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 5px 0;
+  list-style-type: none;
+  background: rgba(33, 33, 33, .9);
+  border-radius: 5px 5px 0 0;
+}
+.dock ul .icon {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+}
+.dock ul .icon img {
+  width: 45px;
+  height: 45px;
+}
+
+#atom{
+
+    transform: translateY(10%);
+    -webkit-transform: scale(1.3);
+
+}
+.dock ul li:hover{
+    -webkit-transform-origin: center bottom;
+    -webkit-transform: scale(1.2);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.text{
+    font-size: 1.5em;
+    font-family:serif;
+    position: absolute;
+    transform: translateY(50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color:#fff;
+}
+#finder-active{
+    visibility: hidden;
+}
+#safari-active{
+    visibility: visible;
+}
+#gmail-active{
+    visibility: hidden;
+}
+#atom-active{
+    visibility: hidden;
+}
+#spotify-active{
+    visibility: hidden;
+}
+.safari {
+  background-color: #fff;
+  border-radius: 5px;
+  display: none;
+  height: 75%;
+  left: 10%;
+  position: absolute;
+  top: 10%;
+  width: 80%;
+}
+.safari .navbar {
+  background-color: #bdc3c7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 3.2em;
+}
+.safari .navbar .buttons {
+  line-height: 3.2em;
+  margin-left: 1em;
+  float: left;
+}
+.safari .navbar .buttons .btn {
+  border-radius: 100%;
+  display: inline-block;
+  height: 1em;
+  margin: 0 0.1em;
+  width: 1em;
+}
+.safari .navbar .buttons .close {
+  background-color: #e74c3c;
+}
+.safari .navbar .buttons .minimize {
+  background-color: #f1c40f;
+}
+.safari .navbar .buttons .full {
+  background-color: #2ecc71;
+}
+.safari .navbar input {
+  border: none;
+  border-radius: 3px;
+  color: #999;
+  float: right;
+  font-size: 1em;
+  margin: 0.6em 1em 0 0;
+  padding: 0.4em;
+  width: 80%;
+}
