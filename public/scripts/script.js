@@ -25,3 +25,11 @@ $( "#spot_5" ).click(function() {
        $('#active_5').toggle();
 
 });
+
+$(function(){
+  $('.safari').draggable();
+  console.log("test");
+});
+$(window).resize(function() {
+   $('.safari').fadeOut("fast")();
+});
