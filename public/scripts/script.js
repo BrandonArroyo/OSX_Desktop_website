@@ -27,9 +27,6 @@ $( "#spot_5" ).click(function() {
 });
 
 $(function(){
-  $('.safari').draggable();
-  console.log("test");
-});
-$(window).resize(function() {
-   $('.safari').fadeOut("fast")();
+  $('.safari').draggable().resizable();
+
 });
